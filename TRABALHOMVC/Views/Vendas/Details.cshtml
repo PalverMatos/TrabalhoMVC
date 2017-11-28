@@ -1,0 +1,43 @@
+﻿@model TRABALHOMVC.Models.Venda
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Venda</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.cliente.nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cliente.nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.item.descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.item.descricao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.data)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.data)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
